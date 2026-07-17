@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Legacy | Al Fattah Construction</title>
+    <meta name="description" content="Discover the enterprise leadership, strategic values, and executive civil engineering capabilities behind Al Fattah Construction. Building high-end structures across Tamil Nadu.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Smooth Scroll Structural Match */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+
+        /* Global Reset Rules Alignment */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #334155; -webkit-font-smoothing: antialiased; }
+
+        /* Standalone Navbar Architecture Overlay */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #ffffff !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 20px rgba(15, 23, 42, 0.05);
+            z-index: 2000;
+        }
+        .nav-brand-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-logo-img { height: 45px; width: auto; object-fit: contain; }
+        .brand-text-block { display: flex; flex-direction: column; }
+        .brand-title { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 700; color: #0f172a !important; letter-spacing: 0.5px; line-height: 1.2; }
+        .brand-tagline { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #64748b !important; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 500; color: #475569 !important; transition: color 0.25s ease; }
+        .nav-links a:hover { color: #0056b3 !important; }
+        .menu-btn { display: none; font-size: 1.3rem; color: #0f172a; cursor: pointer; }
+
+        /* Professional Metric Hero Banner */
+        .page-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('images/projects/8.jpg') no-repeat center center/cover;
+            padding: 160px 6% 100px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid #0056b3;
+        }
+        .hero-bound-wrapper {
+            width: 100%;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-title-group h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero-title-group p {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .hero-metric-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .hero-stat-box { text-align: center; }
+        .hero-stat-box h2 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+        .hero-stat-box p { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* Asynchronous Corporate Narrative Block */
+        .corporate-split-section {
+            padding: 100px 6%;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .corporate-narrative h4 {
+            font-family: 'Inter', sans-serif;
+            color: #0056b3;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .corporate-narrative h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+        .corporate-narrative p {
+            font-size: 1.05rem;
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .corporate-narrative p strong { color: #0f172a; font-weight: 600; }
+        
+        .narrative-visual-deck {
+            position: relative;
+            width: 100%;
+        }
+        .main-frame-img {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .main-frame-img img { width: 100%; display: block; object-fit: cover; }
+
+        /* Strategic Pillars Blueprint Section */
+        .pillars-section-container { background: #f8fafc; padding: 100px 6%; border-top: 1px solid #edf2f7; }
+        .section-center-head { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+        .section-center-head h2 { font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
+        .section-center-head p { font-size: 1rem; color: #64748b; line-height: 1.6; }
+        
+        .pillars-flex-deck {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .corporate-pillar-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px 35px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+        .corporate-pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: #0056b3;
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.04);
+        }
+        .pillar-num-label {
+            position: absolute; top: 35px; right: 35px; font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem; font-weight: 800; color: #f1f5f9; transition: color 0.3s;
+        }
+        .corporate-pillar-card:hover .pillar-num-label { color: #e0f2fe; }
+        .pillar-icon-wrapper {
+            width: 54px; height: 54px; background: rgba(0, 86, 179, 0.06); color: #0056b3;
+            border-radius: 12px; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;
+        }
+        .corporate-pillar-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 600; color: #0f172a; margin-bottom: 12px; }
+        .corporate-pillar-card p { font-size: 0.95rem; color: #475569; line-height: 1.65; }
+
+        /* Executive Governance Profile Area */
+        .executive-governance-panel { padding: 100px 6%; max-width: 1300px; margin: 0 auto; }
+        .executive-profile-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            align-items: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.015);
+        }
+        .executive-image-wrap {
+            position: relative; width: 100%; height: 360px; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15,23,42,0.08); border: 4px solid #ffffff;
+        }
+        .executive-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .executive-details h3 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+        .executive-role-tag {
+            font-size: 0.95rem; color: #0056b3; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 24px; display: inline-block;
+        }
+        .executive-biography { font-size: 1.05rem; color: #475569; line-height: 1.8; margin-bottom: 30px; }
+        .credentials-pill-cloud { display: flex; flex-wrap: wrap; gap: 12px; }
+        .credential-tag {
+            background: #f1f5f9; color: #1e293b; font-size: 0.88rem; font-weight: 600;
+            padding: 8px 18px; border-radius: 30px; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; gap: 8px;
+        }
+        .credential-tag i { color: #0056b3; }
+
+        /* Responsive Engine Adaptive Engine Breakpoints */
+        @media (max-width: 1200px) {
+            .corporate-split-section { grid-template-columns: 1fr; gap: 50px; }
+            .pillars-flex-deck { grid-template-columns: repeat(2, 1fr); }
+            .hero-bound-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            .hero-metric-badge { max-width: 500px; }
+        }
+        @media (max-width: 991px) {
+            .executive-profile-card { grid-template-columns: 1fr; gap: 40px; padding: 40px; text-align: center; }
+            .executive-image-wrap { width: 240px; height: 300px; margin: 0 auto; }
+            .credentials-pill-cloud { justify-content: center; }
+            .menu-btn { display: block; }
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: #ffffff;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 40px;
+                gap: 25px;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            }
+            .nav-links.active { left: 0; }
+        }
+        @media (max-width: 768px) {
+            .pillars-flex-deck { grid-template-columns: 1fr; }
+            .page-hero-banner { padding: 130px 4% 70px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Professional Main Navbar System Mapping -->
+    <nav>
+        <a href="index.html" class="nav-brand-container">
+            <img class="brand-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+            <div class="brand-text-block">
+                <span class="brand-title">AL FATTAH CONSTRUCTION</span>
+                <span class="brand-tagline">Innovation At Work</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <!-- Professional Metric Hero Banner Section -->
+    <header class="page-hero-banner">
+        <div class="hero-bound-wrapper">
+            <div class="hero-title-group">
+                <h1>Our Legacy & Engineering Excellence</h1>
+                <p>Delivering innovative construction solutions with unmatched quality, precision, and reliability. Every project reflects our dedication to craftsmanship, safety, and customer satisfaction.</p>
+            </div>
+            <div class="hero-metric-badge">
+                <div class="hero-stat-box">
+                    <h2>6</h2>
+                    <p>Years Active</p>
+                </div>
+                <div class="hero-stat-box">
+                    <h2>60+</h2>
+                    <p>Completed Builds</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Asynchronous Split Information Block -->
+    <section class="corporate-split-section">
+        <div class="corporate-narrative">
+            <h4>Organizational Profile</h4>
+            <h2>Built for Strength. Designed for Life</h2>
+            <p>For over 15 years, Al Fattah Construction has been delivering exceptional residential and commercial projects with a focus on quality, durability, and innovation. We transform architectural concepts into strong, functional, and visually appealing spaces that stand the test of time.</p>
+            <p>Our experienced team manages every stage of construction—from planning and foundation work to finishing and handover—with precision, transparency, and attention to detail. Every project is executed using premium materials, proven engineering practices, and strict quality standards.</p>
+            <p>Whether it's a dream home, a commercial development, or a renovation project, we are committed to providing reliable construction solutions that exceed expectations while ensuring timely delivery and lasting value.</p>
+        </div>
+        
+        <div class="narrative-visual-deck">
+            <div class="main-frame-img">
+                <img src="images/projects/8.jpg" alt="Premium Multi-Unit Architectural Development Site Framework">
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Pillars Blueprint Grid Section -->
+    <div class="pillars-section-container">
+        <section class="section-center-head">
+            <h2>Our Construction Process</h2>
+            <p>A streamlined approach that ensures quality, transparency, and timely project completion from concept to handover.</p>
+        </section>
+        
+        <main class="pillars-flex-deck">
+            <!-- Strategic Card 1 -->
+            <div class="corporate-pillar-card">
+                <div class="pillar-num-label">01</div>
+                <div class="pillar-icon-wrapper"><i class="fa-solid fa-calculator"></i></div>
+                <h3>Detailed Project Planning</h3>
+                <p>We begin with thorough consultations, site evaluations, and cost estimation to create a clear roadmap for your project. Every detail is carefully planned to ensure efficiency and budget control.</p>
+            </div>
+            
+            <!-- Strategic Card 2 -->
+            <div class="corporate-pillar-card">
+                <div class="pillar-num-label">02</div>
+                <div class="pillar-icon-wrapper"><i class="fa-solid fa-vial-circle-check"></i></div>
+                <h3>Quality Assurance & Material Selection</h3>
+                <p>We use premium construction materials and conduct strict quality inspections at every stage. This commitment ensures structural strength, safety, and long-term durability.</p>
+            </div>
+            
+            <!-- Strategic Card 3 -->
+            <div class="corporate-pillar-card">
+                <div class="pillar-num-label">03</div>
+                <div class="pillar-icon-wrapper"><i class="fa-solid fa-business-time"></i></div>
+                <h3>Efficient Project Execution</h3>
+                <p>Our experienced team manages construction activities, schedules, and resources with precision, ensuring smooth workflow and on-time project delivery without compromising quality.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Executive Governance Bio Layout Block -->
+    <section class="executive-governance-panel">
+        <div class="executive-profile-card">
+            <div class="executive-image-wrap">
+                <img src="./images/Er.png" alt="Er. Mohamed Halith Civil Engineer Executive Portrait">
+            </div>
+            <div class="executive-details">
+                <h3>Er. Mohamed Halith</h3>
+                <span class="executive-role-tag">Proprietor & Chief Civil Engineer</span>
+                <p class="executive-biography">Bringing extensive field experience in reinforced concrete layout tracking, large-scale site logistics, and architectural structural planning, Er. Mohamed Halith directs our entire field engineering division. His precision-focused focus ensures every asset securely matches strict load tolerances, complies cleanly with environmental regulations, and meets our signature brand benchmark standard.</p>
+                <div class="credentials-pill-cloud">
+                    <div class="credential-tag"><i class="fa-solid fa-scroll"></i> Civil Engineering Expert</div>
+                    <div class="credential-tag"><i class="fa-solid fa-helmet-safety"></i>6 Years Field Experience</div>
+                    <div class="credential-tag"><i class="fa-solid fa-building"></i> Residential & Renovation Specialist</div>
+                    <div class="credential-tag"><i class="fa-solid fa-building"></i> Project Execution Leader</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Standard Footer Navigation Block -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+                    <div class="footer-logo-text-block">
+                        <div class="footer-logo-title">AL FATTAH<br>CONSTRUCTION</div>
+                        <div class="footer-logo-tagline">Innovation At Work</div>
+                    </div>
+                </div>
+                <p class="footer-address">
+                    <strong>Address:</strong><br>
+                    Muslim Street,<br>
+                    opposite Sunath Jamath Masjid,<br>
+                    Govindakudi, Tamil Nadu 612701.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alfattahconstruction" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Al Fattah Construction is a trusted construction company dedicated to delivering high-quality residential and commercial building solutions. With expertise in construction, renovation, remodeling, and property maintenance, we combine skilled craftsmanship and strict safety standards to create durable spaces.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Our Commitment</h3>
+                <p>Our dedication to excellence, reliability, and on-time project delivery makes us a preferred partner. From raw ground-up engineering to complex aesthetic renovations, we turn your structural visions into real world assets with complete precision.</p>
+                
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@alfattahconstruction.com&su=Corporate%20Planning%20Desk%20Inquiry" target="_blank" class="footer-support-card">
+                    <span class="support-card-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+                    <span class="support-card-info"><strong>info@alfattahconstruction.com</strong></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Al Fattah Construction. All Rights Reserved. Innovation At Work.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Component -->
+    <a href="https://wa.me/919500669260" class="whatsapp-float flex-center" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation Interactive Link Toggle Script Engine -->
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

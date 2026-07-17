@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Al Fattah Construction</title>
+    <meta name="description" content="Explore our civil engineering services: Custom residential construction, luxury remodeling, multi-unit developments, structural works, and dedicated asset maintenance solutions.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Smooth Scroll Structural Match */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+
+        /* Global Reset Rules Alignment */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #334155; -webkit-font-smoothing: antialiased; }
+
+        /* Standalone Navbar Architecture Overlay */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #ffffff !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 20px rgba(15, 23, 42, 0.05);
+            z-index: 2000;
+        }
+        .nav-brand-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-logo-img { height: 45px; width: auto; object-fit: contain; }
+        .brand-text-block { display: flex; flex-direction: column; }
+        .brand-title { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 700; color: #0f172a !important; letter-spacing: 0.5px; line-height: 1.2; }
+        .brand-tagline { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #64748b !important; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 500; color: #475569 !important; transition: color 0.25s ease; }
+        .nav-links a:hover { color: #0056b3 !important; }
+        .menu-btn { display: none; font-size: 1.3rem; color: #0f172a; cursor: pointer; }
+
+        /* Professional Metric Hero Banner */
+        .page-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('images/projects/4.jpg') no-repeat center center/cover;
+            padding: 160px 6% 100px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid #0056b3;
+        }
+        .hero-bound-wrapper {
+            width: 100%;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-title-group h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero-title-group p {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .hero-action-btn {
+            justify-self: end;
+            background: #0056b3;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 86, 179, 0.3);
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+        .hero-action-btn:hover { transform: translateY(-2px); background: #004494; }
+
+        /* Capabilities Overview Matrix Grid */
+        .services-overview-panel { padding: 100px 6%; max-width: 1300px; margin: 0 auto; }
+        .section-center-head { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+        .section-center-head h2 { font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
+        .section-center-head p { font-size: 1rem; color: #64748b; line-height: 1.6; }
+        
+        .services-grid-deck {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .service-matrix-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px 30px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-matrix-card:hover {
+            transform: translateY(-5px);
+            border-color: #0056b3;
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.04);
+        }
+        .service-card-icon {
+            width: 52px; height: 52px; background: rgba(0, 86, 179, 0.06); color: #0056b3;
+            border-radius: 12px; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
+        }
+        .service-matrix-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.25rem; font-weight: 600; color: #0f172a; margin-bottom: 12px; }
+        .service-matrix-card p { font-size: 0.92rem; color: #475569; line-height: 1.65; margin-bottom: 20px; }
+        .service-card-link {
+            font-size: 0.88rem; font-weight: 600; color: #0056b3; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+        }
+        .service-card-link:hover { text-decoration: underline; }
+
+        /* Alternating Deep-Dive Core Sections */
+        .deep-dive-container { background: #f8fafc; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; padding: 40px 0; }
+        .detail-row-wrapper {
+            max-width: 1300px; margin: 60px auto; padding: 0 6%;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .detail-row-wrapper:nth-child(even) { direction: rtl; }
+        .detail-row-wrapper:nth-child(even) .detail-text-block { direction: ltr; }
+        
+        .detail-text-block h2 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; }
+        .detail-text-block p { font-size: 1.02rem; color: #475569; line-height: 1.75; margin-bottom: 24px; }
+        
+        .specification-bullets { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .specification-bullets li { font-size: 0.9rem; font-weight: 500; color: #1e293b; display: flex; align-items: center; gap: 8px; }
+        .specification-bullets li i { color: #0056b3; font-size: 0.85rem; }
+
+        .detail-graphic-frame { width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(15,23,42,0.05); border: 1px solid #e2e8f0; }
+        .detail-graphic-frame img { width: 100%; display: block; object-fit: cover; height: 380px; }
+
+        /* Technical Asset Assurance Banner */
+        .assurance-cta-block { padding: 100px 6%; text-align: center; max-width: 800px; margin: 0 auto; }
+        .assurance-cta-block i { font-size: 2.5rem; color: #0056b3; margin-bottom: 24px; }
+        .assurance-cta-block h2 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
+        .assurance-cta-block p { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 30px; }
+
+        /* Responsive Adaptive Layout Braking Rules */
+        @media (max-width: 1200px) {
+            .services-grid-deck { grid-template-columns: repeat(2, 1fr); }
+            .detail-row-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            .detail-row-wrapper:nth-child(even) { direction: ltr; }
+            .hero-bound-wrapper { grid-template-columns: 1fr; }
+            .hero-action-btn { justify-self: start; }
+        }
+        @media (max-width: 991px) {
+            .menu-btn { display: block; }
+            .nav-links {
+                position: absolute; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px);
+                background: #ffffff; flex-direction: column; justify-content: flex-start; padding-top: 40px; gap: 25px;
+                transition: left 0.3s ease; box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            }
+            .nav-links.active { left: 0; }
+        }
+        @media (max-width: 768px) {
+            .services-grid-deck { grid-template-columns: 1fr; }
+            .specification-bullets { grid-template-columns: 1fr; }
+            .page-hero-banner { padding: 130px 4% 70px; }
+            .detail-graphic-frame img { height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Professional Main Navbar System Mapping -->
+    <nav>
+        <a href="index.html" class="nav-brand-container">
+            <img class="brand-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+            <div class="brand-text-block">
+                <span class="brand-title">AL FATTAH CONSTRUCTION</span>
+                <span class="brand-tagline">Innovation At Work</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <!-- Professional Core Hero Banner Block -->
+    <header class="page-hero-banner">
+        <div class="hero-bound-wrapper">
+            <div class="hero-title-group">
+                <h1>Complete Construction Expertise</h1>
+                <p>From new building construction and renovations to project management and maintenance services, Al Fattah Construction provides end-to-end solutions tailored to your needs. Every project is executed with precision, transparency, and superior craftsmanship.</p>
+            </div>
+            <a href="contact.html" class="hero-action-btn">Request Quote Analysis</a>
+        </div>
+    </header>
+
+    <!-- Capabilities Grid System -->
+    <section class="services-overview-panel">
+        <div class="section-center-head">
+            <h2>Our Construction Capabilities</h2>
+            <p>Delivering comprehensive construction solutions designed to bring your vision to life with quality, precision, and lasting value.</p>
+        </div>
+
+        <main class="services-grid-deck">
+            <!-- Card 1 -->
+            <div class="service-matrix-card">
+                <div class="service-card-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+                <h3>Residential Construction</h3>
+                <p>Build your dream home with confidence. We specialize in custom homes, luxury villas, apartments, and residential developments crafted with superior materials, modern designs, and exceptional workmanship.</p>
+                <a href="#residential-dive" class="service-card-link">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-matrix-card">
+                <div class="service-card-icon"><i class="fa-solid fa-hammer"></i></div>
+                <h3>Commericial Construction</h3>
+                <p>Construction services for offices, rental apartments, banks, retail spaces, and institutional buildings, designed for durability, efficiency, and professional excellence.</p>
+                <a href="#renovation-dive" class="service-card-link">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-matrix-card">
+                <div class="service-card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3>Renovation</h3>
+                <p>Transform existing spaces with our renovation expertise. Whether upgrading interiors, modernizing structures, or enhancing property value, we deliver seamless renovations tailored to your needs.</p>
+                <a href="#maintenance-dive" class="service-card-link">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </section>
+
+    <!-- Alternating Deep Dive Breakdown Section Wrapper -->
+    <div class="deep-dive-container">
+        
+        <!-- Segment 1: Residential Construction -->
+        <article class="detail-row-wrapper" id="residential-dive">
+            <div class="detail-text-block">
+                <h2>🏠 Residential Building Construction</h2>
+                <p>At Al Fattah Construction, we specialize in crafting modern homes, luxury villas, duplex residences, and multi-family housing projects. Our team combines innovative design, quality materials, and expert engineering to create comfortable living spaces that reflect your lifestyle and stand strong for years to come.</p>
+                <ul class="specification-bullets">
+                    <li><i class="fa-solid fa-circle-check"></i> Premium Brickwork & Masonry</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Modern Architectural Designs</li>
+                    <li><i class="fa-solid fa-circle-check"></i> RCC Structural Frameworks</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Quality Flooring & Finishing</li>
+                </ul>
+            </div>
+            <div class="detail-graphic-frame">
+                <img src="images/projects/1.jpg" alt="Luxury Residential Home Construction Site Framework">
+            </div>
+        </article>
+
+        <!-- Segment 2: Renovation & Remodeling -->
+        <article class="detail-row-wrapper" id="renovation-dive">
+            <div class="detail-text-block">
+                <h2>Commericial Building Construction</h2>
+                <p>We deliver commercial construction solutions tailored to offices, retail outlets, rental apartment complexes, banks, educational institutions, and mixed-use developments. Every project is designed to maximize functionality, safety, and long-term investment value.</p>
+                <ul class="specification-bullets">
+                    <li><i class="fa-solid fa-circle-check"></i> Office & Corporate Buildings</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Rental Residential Complexes</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Industrial & Warehouse Facilities Projects</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Exterior Elevation Updates</li>
+                </ul>
+            </div>
+            <div class="detail-graphic-frame">
+                <img src="images/projects/2.jpg" alt="Modern Interior Space Renovation Works Execution">
+            </div>
+        </article>
+
+        <!-- Segment 3: Building Maintenance Services -->
+        <article class="detail-row-wrapper" id="maintenance-dive">
+            <div class="detail-text-block">
+                <h2>Renovation & Remodeling</h2>
+                <p>Transform aging properties into attractive, efficient, and high-performing spaces. Whether it's a complete renovation, structural upgrade, interior remodeling, or exterior enhancement, we provide customized solutions that improve both aesthetics and functionality.</p>
+                <ul class="specification-bullets">
+                    <li><i class="fa-solid fa-circle-check"></i> Structural Repairs & Strengthening</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Interior & Exterior Renovations</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Waterproofing & Roof Protection</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Property Modernization & Upgrades</li>
+                </ul>
+            </div>
+            <div class="detail-graphic-frame">
+                <img src="images/projects/3.jpg" alt="Structural Property Weatherproofing and Maintenance Solution">
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Technical Trust Assurance Footer CTA Callout -->
+    <section class="assurance-cta-block">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <h2>Ready to Build Your Dream Project?</h2>
+        <p>Whether you're planning a new home, commercial building, renovation, or property development, Al Fattah Construction is here to turn your vision into reality. Our experienced team provides expert guidance, transparent pricing, and quality workmanship from concept to completion.</p>
+        <a href="contact.html" class="hero-action-btn" style="box-shadow: none;">Get a Consultation</a>
+    </section>
+
+    <!-- Standard Footer Navigation Block Match -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+                    <div class="footer-logo-text-block">
+                        <div class="footer-logo-title">AL FATTAH<br>CONSTRUCTION</div>
+                        <div class="footer-logo-tagline">Innovation At Work</div>
+                    </div>
+                </div>
+                <p class="footer-address">
+                    <strong>Address:</strong><br>
+                    Muslim Street,<br>
+                    opposite Sunath Jamath Masjid,<br>
+                    Govindakudi, Tamil Nadu 612701.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alfattahconstruction" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Al Fattah Construction is a trusted construction company dedicated to delivering high-quality residential and commercial building solutions. With expertise in construction, renovation, remodeling, and property maintenance, we combine skilled craftsmanship and strict safety standards to create durable spaces.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Our Commitment</h3>
+                <p>Our dedication to excellence, reliability, and on-time project delivery makes us a preferred partner. From raw ground-up engineering to complex aesthetic renovations, we turn your structural visions into real world assets with complete precision.</p>
+                
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@alfattahconstruction.com&su=Corporate%20Planning%20Desk%20Inquiry" target="_blank" class="footer-support-card">
+                    <span class="support-card-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+                    <span class="support-card-info"><strong>info@alfattahconstruction.com</strong></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Al Fattah Construction. All Rights Reserved. Innovation At Work.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Component -->
+    <a href="https://wa.me/919500669260" class="whatsapp-float flex-center" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation Interactive Link Toggle Script Engine -->
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

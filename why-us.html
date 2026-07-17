@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us | Al Fattah Construction</title>
+    <meta name="description" content="Discover the distinct advantages of partnering with Al Fattah Construction. Uncompromising craftsmanship, absolute compliance, safety metrics, and timely handover models.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Smooth Scroll Structural Match */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+
+        /* Global Reset Rules Alignment */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #334155; -webkit-font-smoothing: antialiased; }
+
+        /* Standalone Navbar Architecture Overlay */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #ffffff !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 20px rgba(15, 23, 42, 0.05);
+            z-index: 2000;
+        }
+        .nav-brand-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-logo-img { height: 45px; width: auto; object-fit: contain; }
+        .brand-text-block { display: flex; flex-direction: column; }
+        .brand-title { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 700; color: #0f172a !important; letter-spacing: 0.5px; line-height: 1.2; }
+        .brand-tagline { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #64748b !important; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 500; color: #475569 !important; transition: color 0.25s ease; }
+        .nav-links a:hover { color: #0056b3 !important; }
+        .menu-btn { display: none; font-size: 1.3rem; color: #0f172a; cursor: pointer; }
+
+        /* Professional Metric Hero Banner */
+        .page-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96)), url('images/projects/2.jpg') no-repeat center center/cover;
+            padding: 160px 6% 100px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid #0056b3;
+        }
+        .hero-bound-wrapper {
+            width: 100%;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-title-group h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero-title-group p {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .hero-stat-badge-grid {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .stat-badge-node { text-align: center; }
+        .stat-badge-node h3 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 700; color: #ffffff; margin-bottom: 2px; }
+        .stat-badge-node p { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* The 4 Core Value Columns Section */
+        .value-pillars-section { padding: 100px 6%; max-width: 1300px; margin: 0 auto; }
+        .section-center-head { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+        .section-center-head h2 { font-family: 'Poppins', sans-serif; font-size: 2.4rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
+        .section-center-head p { font-size: 1rem; color: #64748b; line-height: 1.6; }
+        
+        .pillars-quad-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .pillar-detailed-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 45px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .pillar-detailed-card:hover {
+            transform: translateY(-4px);
+            border-color: #0056b3;
+            box-shadow: 0 15px 35px rgba(0, 86, 179, 0.03);
+        }
+        .pillar-icon-box {
+            width: 60px; height: 60px; background: rgba(0, 86, 179, 0.06); color: #0056b3;
+            border-radius: 14px; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .pillar-info-block h3 { font-family: 'Poppins', sans-serif; font-size: 1.35rem; font-weight: 600; color: #0f172a; margin-bottom: 12px; }
+        .pillar-info-block p { font-size: 0.98rem; color: #475569; line-height: 1.7; }
+
+        /* Professional Architectural Execution Process Flow */
+        .execution-flow-container { background: #f8fafc; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; padding: 100px 6%; }
+        .timeline-linear-track {
+            position: relative; max-width: 1000px; margin: 50px auto 0;
+            display: flex; flex-direction: column; gap: 40px;
+        }
+        .timeline-linear-track::before {
+            content: ''; position: absolute; top: 0; left: 31px; width: 2px; height: 100%; background: #e2e8f0;
+        }
+        .timeline-step-node { position: relative; display: flex; gap: 35px; align-items: flex-start; }
+        .step-indicator-dot {
+            width: 64px; height: 64px; background: #ffffff; border: 2px solid #e2e8f0; color: #0f172a;
+            font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; z-index: 2; flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        .timeline-step-node:hover .step-indicator-dot { border-color: #0056b3; background: #0056b3; color: #ffffff; }
+        .step-narrative-box { background: #ffffff; border: 1px solid #e2e8f0; padding: 30px; border-radius: 16px; width: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.01); }
+        .step-narrative-box h4 { font-family: 'Poppins', sans-serif; font-size: 1.15rem; font-weight: 600; color: #0f172a; margin-bottom: 8px; }
+        .step-narrative-box p { font-size: 0.92rem; color: #475569; line-height: 1.6; }
+
+        /* Bottom Call-To-Action Layout Block */
+        .bottom-action-panel { padding: 100px 6%; text-align: center; max-width: 800px; margin: 0 auto; }
+        .bottom-action-panel h2 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
+        .bottom-action-panel p { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 30px; }
+        .cta-action-btn {
+            background: #0056b3; color: #ffffff; font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 600;
+            padding: 16px 36px; border-radius: 30px; text-decoration: none; display: inline-block;
+            box-shadow: 0 10px 25px rgba(0, 86, 179, 0.25); transition: transform 0.25s ease, background 0.25s ease;
+        }
+        .cta-action-btn:hover { transform: translateY(-2px); background: #004494; }
+
+        /* Responsive Layout Engine Breakpoints */
+        @media (max-width: 1200px) {
+            .pillars-quad-grid { grid-template-columns: 1fr; gap: 30px; }
+            .hero-bound-wrapper { grid-template-columns: 1fr; }
+            .hero-stat-badge-grid { max-width: 500px; }
+        }
+        @media (max-width: 991px) {
+            .menu-btn { display: block; }
+            .nav-links {
+                position: absolute; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px);
+                background: #ffffff; flex-direction: column; justify-content: flex-start; padding-top: 40px; gap: 25px;
+                transition: left 0.3s ease; box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            }
+            .nav-links.active { left: 0; }
+            .pillar-detailed-card { padding: 30px; }
+        }
+        @media (max-width: 768px) {
+            .page-hero-banner { padding: 130px 4% 70px; }
+            .pillar-detailed-card { flex-direction: column; gap: 15px; }
+            .timeline-linear-track::before { left: 23px; }
+            .step-indicator-dot { width: 48px; height: 48px; font-size: 1rem; }
+            .timeline-linear-track { gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Professional Main Navbar System Mapping -->
+    <nav>
+        <a href="index.html" class="nav-brand-container">
+            <img class="brand-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+            <div class="brand-text-block">
+                <span class="brand-title">AL FATTAH CONSTRUCTION</span>
+                <span class="brand-tagline">Innovation At Work</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <!-- Professional Metric Hero Banner Section -->
+    <header class="page-hero-banner">
+        <div class="hero-bound-wrapper">
+            <div class="hero-title-group">
+                <h1>Why choose Al Fattah Construction</h1>
+                <p>At Al Fattah Construction, we are committed to delivering construction solutions that combine superior craftsmanship, modern engineering practices, and exceptional customer service. Every project is managed with precision, transparency, and a focus on exceeding client expectations.</p>
+            </div>
+            <div class="hero-stat-badge-grid">
+                <div class="stat-badge-node">
+                    <h3>60+</h3>
+                    <p>Project Delivered</p>
+                </div>
+                <div class="stat-badge-node">
+                    <h3>100%</h3>
+                    <p>Successful Rate</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Expanded 4 Core Advantages Section -->
+    <section class="value-pillars-section">
+        <div class="section-center-head">
+            <h2>The Al Fattah Advantage</h2>
+            <p>Discover what sets us apart and why clients trust us to deliver exceptional construction solutions with quality, transparency, and reliability.</p>
+        </div>
+
+        <main class="pillars-quad-grid">
+            <!-- Advantage Card 1 -->
+            <div class="pillar-detailed-card">
+                <div class="pillar-icon-box"><i class="fa-solid fa-gem"></i></div>
+                <div class="pillar-info-block">
+                    <h3>Premium Craftsmanship</h3>
+                    <p>Every project is built with meticulous attention to detail, superior materials, and proven construction techniques. We are committed to delivering structures that combine durability, functionality, and outstanding aesthetics.</p>
+                </div>
+            </div>
+
+            <!-- Advantage Card 2 -->
+            <div class="pillar-detailed-card">
+                <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="pillar-info-block">
+                    <h3>Safety & Strict Code Compliance</h3>
+                    <p>Safety and quality are at the core of everything we do. Our projects follow strict construction standards, quality inspections, and industry best practices to ensure long-lasting performance and peace of mind.</p>
+                </div>
+            </div>
+
+            <!-- Advantage Card 3 -->
+            <div class="pillar-detailed-card">
+                <div class="pillar-icon-box"><i class="fa-solid fa-user-gear"></i></div>
+                <div class="pillar-info-block">
+                    <h3>Experienced Civil Leadership</h3>
+                    <p>Our skilled engineers, project managers, and site supervisors bring years of expertise to every project. Through effective planning and coordination, we ensure smooth execution from foundation to final handover.</p>
+                </div>
+            </div>
+
+            <!-- Advantage Card 4 -->
+            <div class="pillar-detailed-card">
+                <div class="pillar-icon-box"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <div class="pillar-info-block">
+                    <h3>Reliable Client Support</h3>
+                    <p>We believe in transparent communication and dependable service. From the initial consultation to project completion, we keep clients informed, address concerns promptly, and deliver on our commitments.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Linear Project Execution Track Section -->
+    <div class="execution-flow-container">
+        <section class="section-center-head">
+            <h2>Our Construction Process</h2>
+            <p>A proven step-by-step approach that ensures quality, transparency, and successful project delivery from planning to completion.</p>
+        </section>
+
+        <main class="timeline-linear-track">
+            <!-- Node Step 1 -->
+            <div class="timeline-step-node">
+                <div class="step-indicator-dot">01</div>
+                <div class="step-narrative-box">
+                    <h4>Consultation & Project Planning</h4>
+                    <p>We begin by understanding your requirements, budget, and project goals. Our team conducts site assessments and develops a detailed plan to ensure a smooth construction journey.</p>
+                </div>
+            </div>
+
+            <!-- Node Step 2 -->
+            <div class="timeline-step-node">
+                <div class="step-indicator-dot">02</div>
+                <div class="step-narrative-box">
+                    <h4>Structural Development & Construction</h4>
+                    <p>Using premium materials and proven engineering practices, we execute foundation work, structural construction, and core building activities with precision and strict quality control.</p>
+                </div>
+            </div>
+
+            <!-- Node Step 3 -->
+            <div class="timeline-step-node">
+                <div class="step-indicator-dot">03</div>
+                <div class="step-narrative-box">
+                    <h4>Precision Masonry & Finishing Works</h4>
+                    <p>Our skilled trades handle wall alignment, setup premium moisture-proof insulation bounds, and apply flawless paint or tile detailing layers to spec.</p>
+                </div>
+            </div>
+
+            <!-- Node Step 4 -->
+            <div class="timeline-step-node">
+                <div class="step-indicator-dot">04</div>
+                <div class="step-narrative-box">
+                    <h4>Finishing & Quality Assurance</h4>
+                    <p>From masonry and flooring to painting and interior finishing, every detail is carefully inspected to ensure superior workmanship, durability, and aesthetic appeal.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Final Engagement Trust Banner -->
+    <section class="bottom-action-panel">
+        <h2>Ready to Start Your Construction Journey?</h2>
+        <p>Whether you're building a dream home, commercial property, or renovation project, Al Fattah Construction is ready to bring your vision to life with expertise, quality, and reliability.</p>
+        <a href="contact.html" class="cta-action-btn">Start Your Project Today?</a>
+    </section>
+
+    <!-- Professional Standard Footer Navigation Block -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+                    <div class="footer-logo-text-block">
+                        <div class="footer-logo-title">AL FATTAH<br>CONSTRUCTION</div>
+                        <div class="footer-logo-tagline">Innovation At Work</div>
+                    </div>
+                </div>
+                <p class="footer-address">
+                    <strong>Address:</strong><br>
+                    Muslim Street,<br>
+                    opposite Sunath Jamath Masjid,<br>
+                    Govindakudi, Tamil Nadu 612701.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alfattahconstruction" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Al Fattah Construction is a trusted construction company dedicated to delivering high-quality residential and commercial building solutions. With expertise in construction, renovation, remodeling, and property maintenance, we combine skilled craftsmanship and strict safety standards to create durable spaces.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Our Commitment</h3>
+                <p>Our dedication to excellence, reliability, and on-time project delivery makes us a preferred partner. From raw ground-up engineering to complex aesthetic renovations, we turn your structural visions into real world assets with complete precision.</p>
+                
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@alfattahconstruction.com&su=Corporate%20Planning%20Desk%20Inquiry" target="_blank" class="footer-support-card">
+                    <span class="support-card-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+                    <span class="support-card-info"><strong>info@alfattahconstruction.com</strong></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Al Fattah Construction. All Rights Reserved. Innovation At Work.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Component -->
+    <a href="https://wa.me/919500669260" class="whatsapp-float flex-center" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation Interactive Link Toggle Script Engine -->
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

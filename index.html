@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Fattah Construction | Luxury Residential Construction & Home Renovation</title>
+    <meta name="description" content="Professional residential construction company delivering luxury home builds, custom villas, modern renovations, and specialized home maintenance solutions. Al Fattah Construction is dedicated to quality.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        html.lenis, html.lenis body { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        .lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis-stopped { overflow: hidden; }
+        .lenis-scrolling iframe { pointer-events: none; }
+
+        /* Full Width Contact Workspace Setup */
+        #contact {
+            padding: 80px 4% !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+        }
+
+        .contact-grid-container {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 30px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        /* Left Side Engineer Card Container */
+        .engineer-card-frame {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+        }
+        .engineer-photo-frame {
+            width: 180px;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            flex-shrink: 0;
+        }
+        .engineer-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .engineer-text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .engineer-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 6px 0;
+            line-height: 1.2;
+        }
+        .engineer-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        .engineer-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Right Column Setup */
+        .contact-right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+        }
+
+        /* Balanced 4-Column Professional Card Strip Grid Row */
+        .info-box-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+        
+        /* Interactive Link Layout Modifiers */
+        .info-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.25s ease;
+        }
+        .info-card-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        .info-card-item {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 14px;
+            padding: 22px 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            box-sizing: border-box;
+            height: 100%;
+            cursor: pointer;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .info-card-link:hover .info-card-item {
+            border-color: rgba(0, 86, 179, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 86, 179, 0.06);
+        }
+
+        .info-card-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(0, 86, 179, 0.06);
+            color: #0056b3;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .info-card-link:hover .info-card-icon {
+            background: #0056b3;
+            color: #ffffff;
+        }
+
+        .info-card-text h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+            margin: 0 0 4px 0;
+            white-space: nowrap;
+        }
+        .info-card-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.75rem, 0.8vw, 0.85rem);
+            color: #555;
+            line-height: 1.4;
+            margin: 0;
+            white-space: nowrap; 
+        }
+
+        /* Broad Full-Coverage Map Container Layout */
+        .map-wrapper-fixed {
+            width: 100%;
+            flex-grow: 1;
+            min-height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Responsive Breakpoints Rules Configuration */
+        @media (max-width: 1400px) {
+            .info-box-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 991px) {
+            .contact-grid-container {
+                grid-template-columns: 1fr;
+            }
+            .engineer-card-frame {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+                padding: 30px;
+            }
+            .engineer-text-block {
+                align-items: flex-start;
+            }
+            .engineer-photo-frame {
+                width: 140px;
+                height: 170px;
+            }
+            .info-box-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 650px) {
+            .info-box-row {
+                grid-template-columns: 1fr;
+            }
+            .engineer-card-frame {
+                flex-direction: column;
+                text-align: center;
+            }
+            .engineer-text-block {
+                align-items: center;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-brand-block">
+            <img class="loader-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+            <div class="loader-title">AL FATTAH CONSTRUCTION</div>
+            <div class="loader-tagline">Innovation At Work</div>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div id="scroll-progress"></div>
+
+    <nav>
+        <a href="#hero" class="nav-brand-container">
+            <img class="brand-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+            <div class="brand-text-block">
+                <span class="brand-title">AL FATTAH CONSTRUCTION</span>
+                <span class="brand-tagline">Innovation At Work</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Transforming Visions into Reality</h1>
+            <p>Delivering high-quality residential and commercial construction, renovation, and maintenance solutions with expert craftsmanship, reliable execution, and a commitment to excellence.</p>
+            <div class="hero-btns">
+                <a href="projects.html" class="btn btn-primary">Explore Our Homes <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="contact.html" class="btn btn-secondary">Get Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="about-img-container visual-reveal">
+            <div class="about-img">
+                <img src="images/projects/8.jpg" alt="Luxury Residential Development by Al Fattah Construction">
+            </div>
+            <div class="about-badge animate-trigger">
+                <h3 class="counter-val" data-target="5">0</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+        <div class="about-content text-reveal">
+            <h4>About Al Fattah Construction</h4>
+            <h2>Building Excellence Through Quality, Innovation & Trust</h2>
+            <p>Al Fattah Construction is a trusted construction company specializing in residential and commercial building projects, renovation services, and property maintenance solutions. With a commitment to quality craftsmanship, safety, and timely project delivery, we transform ideas into durable, functional, and visually appealing spaces that stand the test of time.</p>
+            
+           <div class="about-features">
+    <div class="about-feature-item">
+        <i class="fa-solid fa-house-chimney" style="margin-right: 8px; color: #0056b3;"></i>
+        Residential Construction
+    </div>
+    <div class="about-feature-item">
+        <i class="fa-solid fa-city" style="margin-right: 8px; color: #0056b3;"></i>
+        Commercial Development
+    </div>
+    <div class="about-feature-item">
+        <i class="fa-solid fa-trowel-bricks" style="margin-right: 8px; color: #0056b3;"></i>
+        Renovation & Remodeling
+    </div>
+    <div class="about-feature-item">
+        <i class="fa-solid fa-screwdriver-wrench" style="margin-right: 8px; color: #0056b3;"></i>
+        Maintenance Services
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="section-header">
+            <h2>Our Construction Services</h2>
+            <p>Providing comprehensive construction, renovation, and maintenance solutions for residential and commercial properties, delivered with quality craftsmanship, precision, and reliability.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card glass-card">
+                <div class="service-icon flex-center"><i class="fa-solid fa-trowel-bricks"></i></div>
+                <div>
+                    <h3>Residential Building Construction</h3>
+                    <p>From custom homes to multi-unit residential developments, we deliver durable, functional, and aesthetically appealing living spaces built to the highest standards.</p>
+                </div>
+            </div>
+            <div class="service-card glass-card">
+                <div class="service-icon flex-center"><i class="fa-solid fa-hammer"></i></div>
+                <div>
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Transform existing properties with modern upgrades, structural improvements, space optimization, and interior or exterior renovations tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="service-card glass-card">
+                <div class="service-icon flex-center"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <div>
+                    <h3>Building Maintenance Services</h3>
+                    <p>Comprehensive maintenance solutions including repairs, inspections, preventative maintenance, and facility upkeep to protect your investment.</p>
+                </div>
+            </div>
+            <div class="service-card glass-card">
+                <div class="service-icon flex-center"><i class="fa-solid fa-compass-drafting"></i></div>
+                <div>
+                    <h3>Structural & Civil Works</h3>
+                    <p>Professional execution of foundations, concrete works, structural enhancements, and civil engineering solutions for long-lasting performance.</p>
+                </div>
+            </div>
+            <div class="service-card glass-card">
+                <div class="service-icon flex-center"><i class="fa-solid fa-sheet-plastic"></i></div>
+                <div>
+                    <h3>Turnkey Project Solutions</h3>
+                    <p>End-to-end project management from planning and design coordination to construction and final handover, ensuring a seamless client experience.</p>
+                </div>
+            </div>
+            <div class="service-card glass-card">
+                <div class="service-icon flex-center"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                    <h3>Comprehensive Construction Solutions</h3>
+                    <p>Building, Renovating, and Maintaining Properties with Excellence and Precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="section-padding">
+        <div class="stats-grid animate-trigger">
+            <div class="stat-item">
+                <h2><span class="counter-val" data-target="50">0</span>+</h2>
+                <p>Project Completed</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter-val" data-target="50">0</span>+</h2>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter-val" data-target="100">0</span>%</h2>
+                <p>Client Satisfaction Rate</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter-val" data-target="15">0</span>+</h2>
+                <p>Ongoing Projects</p>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Why Choose Al Fattah Construction</h2>
+            <p>Delivering reliable construction, renovation, and maintenance solutions through expert craftsmanship, quality materials, and a commitment to client satisfaction.</p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <i class="fa-solid fa-gem"></i>
+                <h3>Craftsmanship</h3>
+                <p>Every project is executed with precision, attention to detail, and high-quality workmanship to ensure durable and long-lasting results.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Safety & Compliance</h3>
+                <p>We adhere to strict safety standards and industry regulations, ensuring secure construction practices and peace of mind for our clients.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-house-laptop"></i>
+                <h3>Experienced Professionals</h3>
+                <p>Our skilled engineers, project managers, and construction specialists bring extensive expertise to every residential and commercial project.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Reliable Support</h3>
+                <p>Providing dedicated guidance and responsive service throughout every stage of your project, from initial planning and construction to final handover and ongoing maintenance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="section-header">
+            <h2>The Al Fattah Construction Portfolio</h2>
+            <p>Explore recent premium developments, comprehensive remodels, and structural protective milestones.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="building">
+                <img class="project-img" src="./images/projects/1.jpg" alt="Luxury Custom Villa by Al Fattah Construction">
+                <div class="project-overlay">
+                    <span>New Build</span>
+                    <h3>Residential Home</h3>
+                </div>
+            </div>
+            <div class="project-card" data-category="renovation">
+                <img class="project-img" src="./images/projects/15.jpg" alt="Modern Home Renovation by Al Fattah Construction">
+                <div class="project-overlay">
+                    <span>Renovation</span>
+                    <h3>Renovation & Remodeling</h3>
+                </div>
+            </div>
+            <div class="project-card" data-category="maintenance">
+                <img class="project-img" src="./images/projects/3.jpg" alt="Structural Home Maintenance by Al Fattah Construction">
+                <div class="project-overlay">
+                    <span>Commercial Projects</span>
+                    <h3>Bank</h3>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="projects.html" class="btn btn-primary">Explore Our Homes <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="section-padding">
+        <div class="section-header">
+            <h2>Our Construction Process</h2>
+            <p>A streamlined approach that ensures quality, efficiency, and transparency from project planning to successful completion and ongoing support.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-progress"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>1. Consultation & Planning</h3>
+                    <p>We begin by understanding your requirements, project goals, budget, and timeline to develop a clear construction strategy.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>2. Design & Engineering</h3>
+                    <p>Our team prepares detailed plans, technical drawings, and engineering solutions that align with project specifications and regulatory standards.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>3. Construction & Execution</h3>
+                    <p>Using skilled workmanship and quality materials, we execute every phase of construction with precision, safety, and attention to detail.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>4. Quality Inspection & Finishing</h3>
+                    <p>Comprehensive inspections and finishing works ensure that every aspect of the project meets our high standards of quality and performance.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>5. The Al Fattah Construction Approach</h3>
+                    <p>Our comprehensive project methodology ensures seamless execution, superior workmanship, and reliable results for residential and commercial developments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding">
+        <div class="section-header" style="margin-bottom: 40px;">
+            <h2>What Our Clients Say</h2>
+            <p>Hear from homeowners, business owners, and property managers who have trusted Al Fattah Construction to deliver quality construction, renovation, and maintenance services.</p>
+            <br>
+            <a href="https://www.google.co.in/search?q=AL+FATTAH+CONSTRUCTION&ludocid=9163463137822902449#lrd=0x3baacd430a330a27:0x7f2b292c7a5208b1,3,,," target="_blank" class="btn-google-action" style="text-decoration: none; background: #0056b3; color: #ffffff; padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0, 86, 179, 0.2); transition: background 0.25s ease;">
+                <i class="fa-solid fa-pen-to-square"></i> Leave a Review
+            </a>
+            <a href="https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&sxsrf=ANbL-n5sSmc0WVs3oQBQxKKYAnfhIp2xdw:1781609971339&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOUTrm0Aot7CKGvNw9HjUFaHBdGvjMj2HsneenpzVnBeaBeOnbAjGDJnugmlppR7QFqdaWgVhHLUv8k7C6VgHigCAmtYac0CdLBOJqyIeZ_SEWWItUQ%3D%3D&q=AL+FATTAH+CONSTRUCTION+Reviews&sa=X&ved=2ahUKEwjA5eCr1ouVAxXeSGwGHbdfH8YQ0bkNegQIKBAF&biw=1536&bih=695&dpr=1.25" target="_blank" class="btn-google-action" style="text-decoration: none; background: #0056b3; color: #ffffff; padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0, 86, 179, 0.2); transition: background 0.25s ease;">
+                <i class="fa-solid fa-comments"></i> View Google Reviews
+            </a>
+        </div>
+        <div class="testimonials-slider animate-trigger"></div>
+    </section>
+
+    <!-- Full Screen Width Contact Workspace Section -->
+    <section id="contact" class="section-padding">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+        </div>
+        
+        <div class="contact-grid-container">
+            <!-- Left Side Column: Only Engineer Profile Card -->
+            <div class="engineer-card-frame">
+                <div class="engineer-photo-frame">
+                    <img src="./images/Er.png" alt="Al Fattah Construction Lead Structural Engineer">
+                </div>
+                <div class="engineer-text-block">
+                    <h3 class="engineer-name">Er. Mohamed Halith</h3>
+                    <p class="engineer-title">Proprietor and Chief Civil Engineer</p>
+                    <p class="engineer-desc">Leading end-to-end civil engineering operations, structural planning, site execution, and quality assurance across diverse construction projects.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Wide Layout Blocks -->
+            <div class="contact-right-column">
+                <!-- 4-column row ensuring strings never wrap onto separate lines -->
+                <div class="info-box-row">
+                    <!-- Direct Email Card Button using JS routing -->
+                    <a href="javascript:void(0);" onclick="handleEmailContact(event)" class="info-card-link">
+                        <div class="info-card-item">
+                            <div class="info-card-icon flex-center"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-card-text">
+                                <h3>Direct Concierge</h3>
+                                <p>info@alfattahconstruction.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Desk Line 1 Dialer Button -->
+                    <a href="https://wa.me/919500106675" class="info-card-link">
+                        <div class="info-card-item">
+                            <div class="info-card-icon flex-center"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-card-text">
+                                <h3>WhatsApp Connect</h3>
+                                <p>+91 9500106675</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Desk Line 2 Dialer Button -->
+                    <a href="tel:+918825575030" class="info-card-link">
+                        <div class="info-card-item">
+                            <div class="info-card-icon flex-center"><i class="fa-solid fa-headset"></i></div>
+                            <div class="info-card-text">
+                                <h3>Project Desk 2</h3>
+                                <p>+91 88255 75030</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Instagram Portfolio Social Link Card -->
+                    <a href="https://www.instagram.com/alfattahconstruction" target="_blank" class="info-card-link">
+                        <div class="info-card-item">
+                            <div class="info-card-icon flex-center"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="info-card-text">
+                                <h3>Digital Studio</h3>
+                                <p>@alfattahconstruction</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Google Map Embedded Layer stretching edge-to-edge -->
+                <div class="map-wrapper-fixed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.7744271803667!2d79.34058727451873!3d10.904740456814881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baacd430a330a27%3A0x7f2b292c7a5208b1!2sAL%20FATTAH%20CONSTRUCTION!5e0!3m2!1sen!2sin!4v1781499214653!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <!-- Column 1: Identity & Location -->
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+                    <div class="footer-logo-text-block">
+                        <div class="footer-logo-title">AL FATTAH<br>CONSTRUCTION</div>
+                        <div class="footer-logo-tagline">Innovation At Work</div>
+                    </div>
+                </div>
+                <p class="footer-address">
+                    <strong>Address:</strong><br>
+                    Muslim Street,<br>
+                    opposite Sunath Jamath Masjid,<br>
+                    Govindakudi, Tamil Nadu 612701.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alfattahconstruction" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Profile Summary -->
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Al Fattah Construction is a trusted construction company dedicated to delivering high-quality residential and commercial building solutions. With expertise in construction, renovation, remodeling, and property maintenance, we combine skilled craftsmanship and strict safety standards to create durable spaces.</p>
+            <a href="javascript:void(0);" onclick="handleEmailFooter(event)" class="footer-support-card">
+                    <span class="support-card-icon">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </span>
+                    <span class="support-card-info">
+                        <strong>info@alfattahconstruction.com</strong>
+                    </span>
+                </a>
+            </div>
+            
+
+            <!-- Column 3: Vision & Engagement Desk -->
+            <div class="footer-col">
+                 <div class="footer-col" style="display: flex; flex-direction: column; gap: 15px;">
+                <h3>Scan to Connect</h3>
+                <p style="margin: 0; font-size: 0.88rem; line-height: 1.5;">Scan this QR code to quickly save our contact info or open our location map.</p>
+                <div class="qr-container" style="background: #ffffff; padding: 12px; border-radius: 12px; width: fit-content; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: inline-block;">
+                    <img src="images/qr.png" alt="Scan QR Code" style="width: 130px; height: 130px; display: block; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+                <!-- Footer Support Link using JS routing -->
+            </div>
+
+
+
+        <!-- Bottom Copybar -->
+        <div class="footer-bottom">
+            <p>© 2026 Al Fattah Construction. All Rights Reserved. Innovation At Work.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919500106675" class="whatsapp-float flex-center" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+</body>
+</html>

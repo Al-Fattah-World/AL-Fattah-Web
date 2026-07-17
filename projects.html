@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Al Fattah Construction</title>
+    <meta name="description" content="Explore recent custom villa developments, high-end residential builds, complex estate remodeling, and specialized maintenance projects executed by Al Fattah Construction.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Smooth Scroll Structural Match */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+
+        /* Global Reset Rules Alignment */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #334155; -webkit-font-smoothing: antialiased; }
+
+        /* Prevent image selections globally */
+        img {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* Standalone Navbar Architecture Overlay */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #ffffff !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 20px rgba(15, 23, 42, 0.05);
+            z-index: 2000;
+        }
+        .nav-brand-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-logo-img { height: 45px; width: auto; object-fit: contain; }
+        .brand-text-block { display: flex; flex-direction: column; }
+        .brand-title { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 700; color: #0f172a !important; letter-spacing: 0.5px; line-height: 1.2; }
+        .brand-tagline { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #64748b !important; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 500; color: #475569 !important; transition: color 0.25s ease; }
+        .nav-links a:hover { color: #0056b3 !important; }
+        .menu-btn { display: none; font-size: 1.3rem; color: #0f172a; cursor: pointer; }
+
+        /* Professional Metric Hero Banner */
+        .page-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.94)), url('images/projects/1.jpg') no-repeat center center/cover;
+            padding: 160px 6% 100px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid #0056b3;
+        }
+        .hero-bound-wrapper {
+            width: 100%;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-title-group h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero-title-group p {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .hero-stat-badge-grid {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .stat-badge-node { text-align: center; }
+        .stat-badge-node h3 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 700; color: #ffffff; margin-bottom: 2px; }
+        .stat-badge-node p { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* Filter Controls Styling Wrapper */
+        .filter-controls-area {
+            padding: 60px 6% 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .portfolio-filter-btn {
+            background: #f1f5f9;
+            border: 1px solid transparent;
+            color: #475569;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .portfolio-filter-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .portfolio-filter-btn.active {
+            background: #0056b3;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 86, 179, 0.2);
+        }
+
+        /* Portfolio Gallery Dynamic Core Framework Grid */
+        .portfolio-showcase-container {
+            padding: 20px 6% 100px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .portfolio-asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .portfolio-item-node {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.01);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer; /* Change cursor to pointer for clickability */
+        }
+        .portfolio-item-node:hover {
+            transform: translateY(-6px);
+            border-color: #0056b3;
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.05);
+        }
+        .portfolio-media-wrapper {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+        .portfolio-media-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .portfolio-item-node:hover .portfolio-media-wrapper img {
+            transform: scale(1.05);
+        }
+        .portfolio-category-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+        .portfolio-details-block {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .portfolio-details-block h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        .project-location {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* JavaScript Filtering Class Trigger */
+        .portfolio-item-node.hidden {
+            display: none;
+        }
+
+        /* --- LIGHTBOX MODAL ARCHITECTURE --- */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 5000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .lightbox-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .lightbox-content-wrapper {
+            position: relative;
+            max-width: 85%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lightbox-image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .lightbox-image-container img {
+            max-width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        /* Anti-save overlay element blocking click/drag maps */
+        .lightbox-protection-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0);
+            z-index: 10;
+        }
+        .lightbox-caption {
+            color: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .lightbox-close-btn {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: transparent;
+            border: none;
+            color: #cbd5e1;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            z-index: 20;
+        }
+        .lightbox-close-btn:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Layout Engine Breakpoints */
+        @media (max-width: 1200px) {
+            .portfolio-asymmetric-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+            .hero-bound-wrapper { grid-template-columns: 1fr; }
+            .hero-stat-badge-grid { max-width: 500px; }
+        }
+        @media (max-width: 991px) {
+            .menu-btn { display: block; }
+            .nav-links {
+                position: absolute; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px);
+                background: #ffffff; flex-direction: column; justify-content: flex-start; padding-top: 40px; gap: 25px;
+                transition: left 0.3s ease; box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            }
+            .nav-links.active { left: 0; }
+        }
+        @media (max-width: 768px) {
+            .portfolio-asymmetric-grid { grid-template-columns: 1fr; }
+            .page-hero-banner { padding: 130px 4% 70px; }
+            .filter-controls-area { padding-top: 40px; }
+            .portfolio-media-wrapper { height: 220px; }
+            .lightbox-content-wrapper { max-width: 95%; }
+            .lightbox-close-btn { right: 10px; top: -45px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-brand-container">
+            <img class="brand-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+            <div class="brand-text-block">
+                <span class="brand-title">AL FATTAH CONSTRUCTION</span>
+                <span class="brand-tagline">Innovation At Work</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <header class="page-hero-banner">
+        <div class="hero-bound-wrapper">
+            <div class="hero-title-group">
+                <h1>Our Engineering Portfolio</h1>
+                <p>A selective presentation of custom residential villas, completed interior remodels, and structural protective milestones handled to elite tolerances.</p>
+            </div>
+            <div class="hero-stat-badge-grid">
+                <div class="stat-badge-node">
+                    <h3>60+</h3>
+                    <p>Total Completed</p>
+                </div>
+                <div class="stat-badge-node">
+                    <h3>25+</h3>
+                    <p>Renovation Task</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="filter-controls-area">
+        <button class="portfolio-filter-btn active" data-project-filter="all">All Projects</button>
+        <button class="portfolio-filter-btn" data-project-filter="residential">New Builds</button>
+        <button class="portfolio-filter-btn" data-project-filter="commercial">Commercial</button>
+        <button class="portfolio-filter-btn" data-project-filter="renovation">Renovation</button>
+    </div>
+
+    <main class="portfolio-showcase-container">
+        <div class="portfolio-asymmetric-grid" id="portfolio-engine-view">
+            
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/1.jpg" alt="Luxury Custom Villa Architecture Build Framework">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residential Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/2.jpg" alt="Modern Minimalist Open Kitchen Living Remodeling">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residential Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="renovation">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">Renovation</span>
+                    <img src="./images/projects/3.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Renovation & Remodeling</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/4.jpeg" alt="Luxury Custom Villa Architecture Build Framework">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Porayar,Mayiladuthurai District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="renovation">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">Renovation & Remodeling</span>
+                    <img src="./images/projects/5.jpg" alt="Modern Minimalist Open Kitchen Living Remodeling">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Renovation & Remodeling</h3>
+                    <p class="project-location">Location: Patteswaram, Thanjavur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/6.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Darasuram, Thanjavur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/7.jpg" alt="Luxury Custom Villa Architecture Build Framework">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/8.jpg" alt="Modern Minimalist Open Kitchen Living Remodeling">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Avaniyapuram, Thanjavur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/9.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/10.jpg" alt="Luxury Custom Villa Architecture Build Framework">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Swamimalai, Thanjavur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/11.jpg" alt="Modern Minimalist Open Kitchen Living Remodeling">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/12.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Nachiyarkovil, Thanjavur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/13.jpg" alt="Luxury Custom Villa Architecture Build Framework">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/14.jpg" alt="Modern Minimalist Open Kitchen Living Remodeling">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="renovation">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">Renovation</span>
+                    <img src="./images/projects/15.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Renovation & Remodeling</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/16.jpg" alt="Luxury Custom Villa Architecture Build Framework">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residential Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="renovation">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">Renovation</span>
+                    <img src="./images/projects/17.jpg" alt="Modern Minimalist Open Kitchen Living Remodeling">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Renovation & Remodeling</h3>
+                    <p class="project-location">Location: Ammapettai, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="renovation">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">Renovation</span>
+                    <img src="./images/projects/18.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Renovation & Remodeling</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/19.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Thirunarayur, Thanjavur District</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item-node" data-project-category="residential">
+                <div class="portfolio-media-wrapper">
+                    <span class="portfolio-category-tag">New Build</span>
+                    <img src="./images/projects/20.jpg" alt="Foundational Waterproofing and Protection Management">
+                </div>
+                <div class="portfolio-details-block">
+                    <h3>Residental Home</h3>
+                    <p class="project-location">Location: Govindakudi, Thiruvarur District</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="lightbox-modal" id="portfolio-lightbox">
+        <div class="lightbox-content-wrapper">
+            <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+            <div class="lightbox-image-container">
+                <div class="lightbox-protection-overlay"></div>
+                <img id="lightbox-target-img" src="" alt="Enlarged Project Asset" draggable="false">
+            </div>
+            <div class="lightbox-caption" id="lightbox-target-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo-wrap">
+                    <img class="footer-logo-img" src="images/logo.png" alt="Al Fattah Construction Logo">
+                    <div class="footer-logo-text-block">
+                        <div class="footer-logo-title">AL FATTAH<br>CONSTRUCTION</div>
+                        <div class="footer-logo-tagline">Innovation At Work</div>
+                    </div>
+                </div>
+                <p class="footer-address">
+                    <strong>Address:</strong><br>
+                    Muslim Street,<br>
+                    opposite Sunath Jamath Masjid,<br>
+                    Govindakudi, Tamil Nadu 612701.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alfattahconstruction" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Al Fattah Construction is a trusted construction company dedicated to delivering high-quality residential and commercial building solutions. With expertise in construction, renovation, remodeling, and property maintenance, we combine skilled craftsmanship and strict safety standards to create durable spaces.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Our Commitment</h3>
+                <p>Our dedication to excellence, reliability, and on-time project delivery makes us a preferred partner. From raw ground-up engineering to complex aesthetic renovations, we turn your structural visions into real world assets with complete precision.</p>
+                
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@alfattahconstruction.com&su=Corporate%20Planning%20Desk%20Inquiry" target="_blank" class="footer-support-card">
+                    <span class="support-card-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+                    <span class="support-card-info"><strong>info@alfattahconstruction.com</strong></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Al Fattah Construction. All Rights Reserved. Innovation At Work.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919500669260" class="whatsapp-float flex-center" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Main Mobile Navigation Links Toggle Script
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Portfolio Category Multi-Filter JavaScript Engine
+        const filterControls = document.querySelectorAll('.portfolio-filter-btn');
+        const projectGalleryNodes = document.querySelectorAll('.portfolio-item-node');
+
+        filterControls.forEach(controlNode => {
+            controlNode.addEventListener('click', () => {
+                filterControls.forEach(node => node.classList.remove('active'));
+                controlNode.classList.add('active');
+                
+                const chosenCategory = controlNode.getAttribute('data-project-filter');
+                
+                projectGalleryNodes.forEach(galleryNode => {
+                    const nodeTargetGroup = galleryNode.getAttribute('data-project-category');
+                    
+                    if (chosenCategory === 'all' || nodeTargetGroup === chosenCategory) {
+                        galleryNode.classList.remove('hidden');
+                    } else {
+                        galleryNode.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        /* --- LIGHTBOX & IMAGE PROTECTION LOGIC --- */
+        const lightbox = document.getElementById('portfolio-lightbox');
+        const lightboxImg = document.getElementById('lightbox-target-img');
+        const lightboxCaption = document.getElementById('lightbox-target-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        // Open Lightbox when clicking on any portfolio item
+        projectGalleryNodes.forEach(node => {
+            node.addEventListener('click', () => {
+                const itemImg = node.querySelector('.portfolio-media-wrapper img');
+                const itemTitle = node.querySelector('.portfolio-details-block h3').innerText;
+                const itemLocation = node.querySelector('.project-location').innerText;
+
+                if (itemImg) {
+                    lightboxImg.src = itemImg.src;
+                    lightboxCaption.innerHTML = `<strong>${itemTitle}</strong> — ${itemLocation}`;
+                    lightbox.classList.add('active');
+                }
+            });
+        });
+
+        // Close functions
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            setTimeout(() => { lightboxImg.src = ""; }, 400); // Clear image reference
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            // Close only if clicking the background backdrop overlay
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Escape key structural close support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // 1. Defend against Context Menu (Right Click) completely
+        document.addEventListener('contextmenu', (e) => {
+            if (e.target.tagName === 'IMG' || e.target.classList.contains('lightbox-protection-overlay')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // 2. Intercept keyboard commands targeting download/saving frameworks
+        document.addEventListener('keydown', (e) => {
+            // Block Ctrl+S, Ctrl+C, Ctrl+U (View Source), and Ctrl+Shift+I / F12 (DevTools shortcut maps)
+            if (
+                (e.ctrlKey && (e.key === 's' || e.key === 'S' || e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U')) ||
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j')) ||
+                e.key === 'F12'
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
